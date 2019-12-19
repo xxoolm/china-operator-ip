@@ -15,7 +15,7 @@ for file in *.txt; do
 	(
 		sum=0
 		while read n; do
-			if [[ -n $n ]]; then
+			if [[ -n $n ]] && [[ $n -le $base ]]; then
 				((s=$base-n))
 				((sum+=1<<s))
 			fi
